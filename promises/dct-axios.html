@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>API Request</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        const url = 'https://jsonplaceholder.typicode.com/users';
+
+        // working with axios
+        // axios.get(url)
+        //     .then((response) => {
+        //         const users = response.data;
+        //         console.log(users);
+        //     }).catch(error => {
+        //         console.log(error.message);
+        //     });
+
+        // create our own axios - producing code & consuming code
+        const dctAxios = {
+            get: function(url) {
+                const promiseObj = new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest;
+                    xhr.open('GET', url);
+                    xhr.send()
+                    xhr.onload = function() {
+                        const data = JSON.parse(xhr.responseText);
+                        resolve(data);
+                    }
+
+                    xhr.onerror = function() {
+                        reject('something went wrong');
+                    }
+                })
+                return promiseObj;
+            }
+        };
+
+        //consuming code
+        dctAxios.get(url)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error.message);
+            });
+    </script>
+</body>
+</html>

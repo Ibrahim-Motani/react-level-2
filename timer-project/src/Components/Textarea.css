@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.vertical {
+  border-left: 6px solid black;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+}
+
+.text-area-component {
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin-top: 10%;
+  border-radius: 10%;
+}
+
+.text-area__heading,
+.list__heading {
+  letter-spacing: 0.5rem;
+  font-weight: 600;
+}
+
+.text-area__input {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  font-size: 1rem;
+}
+
+.text-area__button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.text-area__button {
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+
+.text-area__button:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.text-area__button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.text-area__button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.twitter:hover {
+  color: #38a1f3;
+}
+
+.list-component {
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin-top: 10%;
+  border-radius: 10%;
+}
+
+.list-component__ul {
+  padding: 0;
+  text-align: center;
+}
+
+.list-component__li {
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 8px;
+  border: 0.9px solid rgb(68, 61, 61);
+  display: flex;
+  letter-spacing: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-component__a {
+  text-align: center;
+}
+
+.list-component__a,
+.list-component__a:hover,
+.list-component__a:focus,
+.list-component__a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-component__edit {
+  font-size: 16px;
+  height: 90%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #333;
+  outline: none;
+  padding: 8px 25px;
+}
+
+.list-component__edit:hover {
+  cursor: pointer;
+}
+
+.positive {
+    border: 2px solid rgb(83, 199, 48);
+}
+
+.negative {
+    border: 2px solid rgb(199, 48, 48);
+}
+
+.neutral {
+    border: 2px solid #ccc;
+}

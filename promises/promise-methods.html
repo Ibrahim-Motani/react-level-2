@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>API Request</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        const url1 = 'https://jsonplaceholder.typicode.com/users';
+        const url2 = 'https://jsonplaceholder.typicode.com/posts';
+
+        Promise.all([axios.get(url1), axios.get(url2)])
+            .then((values) => {
+                console.log(values);
+            }).catch((error) => {
+                console.log(error.message);
+            })
+    </script>
+</body>
+</html>
